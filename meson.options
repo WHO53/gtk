@@ -87,6 +87,13 @@ option('accesskit',
        value: 'disabled',
        description: 'Enable the AccessKit backend for accessibility')
 
+option(
+       'moltenvk-dir',
+       type : 'string',
+       value : '/opt/homebrew/opt/molten-vk',
+       description : 'Location of the MoltenVK SDK (only when building on macOS)'
+)
+
 # Introspection
 
 option('introspection',
