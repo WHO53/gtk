@@ -244,7 +244,7 @@ macos:
   variables:
     EXTRA_MESON_FLAGS: ""
     BACKEND_FLAGS: "-Dx11-backend=false -Dbroadway-backend=true"
-    FEATURE_FLAGS: "-Dmedia-gstreamer=disabled -Dintrospection=enabled -Dgobject-introspection:werror=false"
+    FEATURE_FLAGS: "-Dvulkan=auto -Dmedia-gstreamer=disabled -Dintrospection=enabled -Dgobject-introspection:werror=false"
     TMPDIR: /Users/Shared/work/tmp
     PIP_CACHE_DIR: /Users/Shared/build/cache
     PIPENV_CACHE_DIR: $PIP_CACHE_DIR
