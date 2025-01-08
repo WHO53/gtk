@@ -343,7 +343,7 @@ gtk_text_line_display_cache_get (GtkTextLineDisplayCache *cache,
         {
           STAT_INC (cache->hits);
 
-          if (!size_only && display->line == cache->cursor_line)
+          if (!size_only)
             gtk_text_layout_update_display_cursors (layout, display->line, display);
 
           if (!size_only && display->has_children)
@@ -374,8 +374,7 @@ gtk_text_line_display_cache_get (GtkTextLineDisplayCache *cache,
 
   if (!size_only)
     {
-      if (line == cache->cursor_line)
-        gtk_text_layout_update_display_cursors (layout, line, display);
+      gtk_text_layout_update_display_cursors (layout, line, display);
 
       if (display->has_children)
         gtk_text_layout_update_children (layout, display);
